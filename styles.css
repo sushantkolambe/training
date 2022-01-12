@@ -2,7 +2,7 @@
     .root{
         display: none;
     }
-    .flex .box-3 .content-img{
+    .secondary-flex .box-3 .content-img{
         flex-direction:column-reverse;
     }
 }
@@ -10,6 +10,22 @@
     .flex .header{
         display: none;
     }
+    body .primary-flex{
+        display: flex;
+        max-width: 1160px;
+        justify-content: center;
+    }
+    body .primary-flex .box-2{
+        position: relative;
+    }
+    body .primary-flex .continue-button{
+        position: absolute;
+    }
+    /* body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } */
 }
 /*****************************************************/
 .box-1, .box-2, .box-3, .box-4, .continue-button{
@@ -19,7 +35,7 @@
 body{
     background: #E5E5E5;
 }
-body .flex{
+body .secondary-flex{
     display: flex;
     flex-direction: column;
 }
@@ -252,6 +268,7 @@ nav, .header, .box-1, .box-2, .box-3, .box-4, .continue-button{
 }
 .box-3 .content-img{
     display: flex;
+    flex-direction: row;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;

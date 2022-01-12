@@ -1,4 +1,4 @@
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 870px) {
     .root{
         display: none;
     }
@@ -6,19 +6,20 @@
         flex-direction:column-reverse;
     }
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 870px) {
     .flex .header{
         display: none;
     }
 }
+/*****************************************************/
 .box-1, .box-2, .box-3, .box-4, .continue-button{
     max-width: 1160px;
-    margin: auto;/*===============================*/
+    margin: auto;
 }
 body{
     background: #E5E5E5;
 }
-.flex{
+body .flex{
     display: flex;
     flex-direction: column;
 }
@@ -31,51 +32,61 @@ body{
 nav, .header, .box-1, .box-2, .box-3, .box-4, .continue-button{
     font-family: 'Poppins', sans-serif;
 }
+/**************************NAV***************************/
 .root nav{
     margin: auto;
     max-width: 1160px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 1.5%;
+    gap: 30%;
 }
-.root nav #explore{
-    margin-left: 10%;
+.root nav .nav-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: 10px;
+}
+.root nav .nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: 10px;
 }
 .root nav span{
     color: #E03C31;
 }
-
+/*************************HEADER**************************/
 .header{
     display: flex;
     align-items: center;
     background: #FFFFFF;
+    width: 100%;
 }
 .header span{
     flex: 1;
     text-align: center;
     margin-left: -56px;
 }
+/**************************BOX-1**************************/
 .box-1{
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
     width: 100%;
 }
-/* .image-1{
-    width: 100%;
-    height: 211px;
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 44.72%, rgba(33, 33, 33, 0.3) 100%), 
-    url(img/skinnsi_1_2806.png);
-    mask-repeat: no-repeat;
-    background-repeat: no-repeat;
-} */
 .image-1 img{
     width: 100%;
 }
 .image-1{
     position: relative;
+}
+.box-1 #gradient{
+    position: absolute;
+    left: 0;
 }
 .image-1 svg{
     position: absolute;
@@ -90,17 +101,21 @@ nav, .header, .box-1, .box-2, .box-3, .box-4, .continue-button{
     margin: 16px;
 }
 .box-1 .person-clock{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     margin-top: auto;
     margin-left: 4.27%;
     margin-bottom: auto;
     margin-right: 4.27%;
 }
-.box-1 #person{
-    padding-bottom: 0px;
+.person-clock-section-1{
+    display: flex;
 }
-.box-1 #clock{
-    padding-top: 8px;
+.person-clock-section-2{
+    display: flex;
 }
+
 .box-1 #person-text{
     font-size: 14px;
     line-height: 160%;
@@ -113,20 +128,20 @@ nav, .header, .box-1, .box-2, .box-3, .box-4, .continue-button{
     color: #424242;
     padding-left: 10px;
 }
-
+/*********************BOX-2*******************************/
 .box-2{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
+    max-width: 1160px;
 }
 .box-2 #select-sessions{
     font-weight: 500;
     font-size: 16px;
     color: #424242;
+    padding-left: 20px;
 }
 .box-2 #best-choice{
     width: fit-content;
@@ -139,23 +154,39 @@ nav, .header, .box-1, .box-2, .box-3, .box-4, .continue-button{
     padding-top: 2px;
     padding-bottom: 2px;
     text-align: center;
-    margin-left: 25px;
+    margin-left: 45px;
 }
 .box-2 .input-text-cost{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.box-2 .section-1{
+    display: flex;
+    flex-grow: 2;
+}
+.box-2 .section-2{
+    display: flex;
+}
+.box-2 .section-3{
+    display: flex;
+}
+.box-2 .section-4{
+    display: flex;
+}
+.text-section-1, .text-section-2, .text-section-3, .text-section-4{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    min-width: 220px;
+}
+.cost-section-1, .cost-section-2, .cost-section-3, .cost-section-4{
+    flex-grow: 1;
 }
 .box-2 input{
-    display: flex;
-    flex-direction: column;
     width: 8px;
     color: #E03C31;
-}
-.box-2 .text-tags{
-    display: flex;
-    flex-direction: column;
-    margin-left: 12px;
-    margin-right: 16px;
 }
 .box-2 .box2-input-txt{
     font-weight: 500;
@@ -192,6 +223,7 @@ nav, .header, .box-1, .box-2, .box-3, .box-4, .continue-button{
 }
 .box-2 .offer-22000{
     display: flex;
+    gap: 8px;
 }
 .box-2 .save-tag{
     font-weight: 500;
@@ -212,23 +244,27 @@ nav, .header, .box-1, .box-2, .box-3, .box-4, .continue-button{
     color: #E03C31;
     margin: 0;
 }
-
+/*********************BOX-3*******************************/
 .box-3{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    width: 100%;
 }
 .box-3 .content-img{
     display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
 }
-.box-3 .skinnsi-safe{
+.box-3 #skinnsi-safe{
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     color: #424242;
+    padding-left: 20px;
+    margin-bottom: 0;
 }
-.box-3 .box-3-content{
-    top: 56px;
+.box-3 #box-3-content{
     font-size: 14px;
     line-height: 140%;
     color: #424242;
@@ -237,7 +273,20 @@ nav, .header, .box-1, .box-2, .box-3, .box-4, .continue-button{
     width: 100%;
     margin-right: 10px;
 }
-.box-4 .box-4-tags{
+/***********************BOX-4*****************************/
+.box-4{
+    margin-top: 8px;
+    width: 100%;
+}
+.box-4 ul{
+    list-style-image: url(img/Vector.png);
+    font-size: 14px;
+    line-height: 160%;
+    color: rgba(0, 0, 0, 0.8);
+    padding-left: 40px;
+    padding-bottom: 50px;
+}
+.box-4 .tags{
     background: rgba(10, 180, 27, 0.08);
     border-radius: 4px;
     padding: 4px 8px;
@@ -245,35 +294,24 @@ nav, .header, .box-1, .box-2, .box-3, .box-4, .continue-button{
     font-weight: 800;
     font-size: 14px;
     line-height: 100%;
-    height: 14px;
-    left: 8px;
-    top: 4px;
+    height: 14px;   
 }
-
-.box-4 ul{
-    list-style-image: url(img/Vector.png);
-    font-size: 14px;
-    line-height: 160%;
-    color: rgba(0, 0, 0, 0.8);
-    padding-inline-start: 20px;
-    padding-bottom: 50px;
+.box-4 .box-4-tags{
+    padding-top: 20px;
+    padding-left: 20px;
 }
-.box-4{
-    padding: 20px;
-    margin-top: 8px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
+/********************Continue-button**********************/
 .continue-button{
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
     bottom: 0px;
-    padding: 16px;
     width: 100%;
     left: 0;
     right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .continue-button button{
     text-align: center;

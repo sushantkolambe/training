@@ -5,15 +5,24 @@
     .secondary-flex .box-3 .content-img{
         flex-direction:column-reverse;
     }
+    /* body .primary-flex{
+        display: flex;
+        flex-direction: column;
+        order: 1;
+    } */
+    
 }
 @media screen and (min-width: 870px) {
-    .flex .header{
+    .secondary-flex .header{
         display: none;
     }
     body .primary-flex{
         display: flex;
+        flex-direction: row;
         max-width: 1160px;
-        justify-content: center;
+        gap: 1.8%;
+        margin: auto;
+        margin-top: 1.5%;
     }
     body .primary-flex .box-2{
         position: relative;
@@ -21,11 +30,7 @@
     body .primary-flex .continue-button{
         position: absolute;
     }
-    /* body{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    } */
+    
 }
 /*****************************************************/
 .box-1, .box-2, .box-3, .box-4, .continue-button{
@@ -42,7 +47,7 @@ body .secondary-flex{
 .root, nav, .box-1, .box-2, .box-3, .box-4, .continue-button{
     background-color: #FFFFFF;
 }
-.box-2, .box-3, .box-4{
+.box-1, .box-2, .box-3, .box-4{
     margin-top: 8px;
 }
 nav, .header, .box-1, .box-2, .box-3, .box-4, .continue-button{
@@ -56,21 +61,20 @@ nav, .header, .box-1, .box-2, .box-3, .box-4, .continue-button{
     flex-direction: row;
     justify-content: space-around;
     padding: 1.5%;
-    gap: 30%;
 }
 .root nav .nav-left{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-grow: 1;
-    gap: 10px;
+    gap: 20px;
 }
 .root nav .nav-right{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-grow: 1;
-    gap: 10px;
+    gap: 20px;
 }
 .root nav span{
     color: #E03C31;

@@ -5,6 +5,9 @@
     .secondary-flex .box-3 .content-img{
         flex-direction:column-reverse;
     }
+    .secondary-flex .box-1{
+        margin-top: 0;
+    }
     /* body .primary-flex{
         display: flex;
         flex-direction: column;

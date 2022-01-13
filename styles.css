@@ -8,11 +8,13 @@
     .secondary-flex .box-1{
         margin-top: 0;
     }
-    /* body .primary-flex{
-        display: flex;
-        flex-direction: column;
-        order: 1;
-    } */
+    body .primary-flex .box-2{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    body{
+        margin: 0;
+    }
     
 }
 @media screen and (min-width: 870px) {
@@ -29,6 +31,8 @@
     }
     body .primary-flex .box-2{
         position: relative;
+        width: 370px;
+        border-radius: 8px;
     }
     body .primary-flex .continue-button{
         position: absolute;

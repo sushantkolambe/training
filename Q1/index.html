@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #message-box{
+            padding: 20px;
+            background-color: rgb(164, 172, 255);
+            text-align: left;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="first-name" id="first-name">
+    <input type="text" name="last-name" id="last-name">
+    <button id="completeName">See complete name</button>
+    <div id="message-box"></div>
+
+    <script>
+        document.getElementById("completeName")
+        .addEventListener("click",()=>{
+            var first = document.getElementById("first-name").value;
+            var last = document.getElementById("last-name").value;
+            document.getElementById("message-box").innerHTML = `${first} ${last}`;
+        });
+        
+
+        
+    </script>
+</body>
+</html>

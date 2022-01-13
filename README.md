@@ -1,6 +1,3 @@
 # training
 
-Day 2
-HTML form
-tooltip
-link
+Day 3 Skinnsi Website

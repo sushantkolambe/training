@@ -17,18 +17,22 @@
 <body>
     <input type="text" name="first-name" id="first-name">
     <input type="text" name="last-name" id="last-name">
-    <button id="completeName">See complete name</button>
+    <button onclick="displayName()" id="completeName">See complete name</button>
     <div id="message-box"></div>
 
     <script>
-        document.getElementById("completeName")
-        .addEventListener("click",()=>{
+        // document.getElementById("completeName")
+        // .addEventListener("click",()=>{
+        //     var first = document.getElementById("first-name").value;
+        //     var last = document.getElementById("last-name").value;
+        //     document.getElementById("message-box").innerHTML = `${first} ${last}`;
+        // });
+        
+        function displayName(){
             var first = document.getElementById("first-name").value;
             var last = document.getElementById("last-name").value;
             document.getElementById("message-box").innerHTML = `${first} ${last}`;
-        });
-        
-
+        }
         
     </script>
 </body>

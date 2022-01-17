@@ -42,13 +42,6 @@ h3{
     text-align: center;
     padding-bottom: 10px;
 }
-input:invalid, textarea:invalid, select {
-    outline: solid rgb(255, 0, 0);
-}
-
-input:valid, textarea:valid, select:invalid {
-    background: rgba(156, 247, 110, 0.708);
-}
 table td{
     padding: 2%;
     min-width: 150px;

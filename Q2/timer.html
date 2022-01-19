@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Timer</h1>
+    <div class="inputs">
+        <!-- <input type="number" placeholder="hrs" name="timer" id="hrs">:
+        <input type="number" placeholder="mins" name="timer" id="mins">: -->
+        <input type="number" placeholder="Enter Seconds" name="timer" id="secs">
+    </div>
+
+    <div id="start_stop_pause_reset">
+        <button id="start" onclick="start_timer()">Start</button>
+        <button id="stop" onclick="stop_timer()">Stop</button>
+        <button id="pause" onclick="pause_timer()">Pause</button>
+        <button id="reset" onclick="reset_timer()">Reset</button>
+    </div>
+
+    <div id="timer_ended"></div>
+
+    <div class="clock">
+		<div class="num num1">
+			<div>5</div>
+		</div>
+		<div class="num num2">
+			<div>10</div>
+		</div>
+		<div class="num num3">
+			<div>15</div>
+		</div>
+		<div class="num num4">
+			<div>20</div>
+		</div>
+		<div class="num num5">
+			<div>25</div>
+		</div>
+		<div class="num num6">
+			<div>30</div>
+		</div>
+		<div class="num num7">
+			<div>35</div>
+		</div>
+		<div class="num num8">
+			<div>40</div>
+		</div>
+		<div class="num num9">
+			<div>45</div>
+		</div>
+		<div class="num num10">
+			<div>50</div>
+		</div>
+		<div class="num num11">
+			<div>55</div>
+		</div>
+		<div class="num num12">
+			<div>0</div>
+		</div>
+
+		<div class="hand" id="sec">
+			<div class="sec"></div>
+		</div>
+		<div class="hand" id="min">
+			<div class="min"></div>
+		</div>
+		<div class="hand" id="hour">
+			<div class="hour"></div>
+		</div>
+	</div>
+
+    <script src="app.js"></script>
+</body>
+</html>

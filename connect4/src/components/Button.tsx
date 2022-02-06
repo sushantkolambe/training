@@ -1,11 +1,12 @@
 import './Button.css';
 interface ButtonProps{
+    buttonNum:number
     onClick:()=>void;
     buttonText:string;
 }
-function Button({onClick, buttonText}:ButtonProps){
+function Button({buttonNum, onClick, buttonText}:ButtonProps){
     return (
-        <button onClick={onClick}>{buttonText}</button>
+        <button id={`button${buttonNum}`} onClick={onClick}>{buttonText}</button>
     );
 }
 

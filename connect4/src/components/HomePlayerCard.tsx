@@ -1,15 +1,31 @@
 interface ButtonProps{
     background:string; 
-    icon:any;
     playerNum:number; 
     player:string;
     setPlayer:any;
+    playerPicture:string;
+    setPlayerPicture:any;
 }
-
-function HomePlayerCard({background, icon, playerNum, player, setPlayer}: ButtonProps){
+// let i = require('../img/male.png');
+function HomePlayerCard({background, playerNum, player, setPlayer, playerPicture, setPlayerPicture}: ButtonProps){
+    function loadfile(event:any){
+	    let fileURL = URL.createObjectURL(event.target.files[0]);
+        console.log(fileURL)
+        setPlayerPicture(fileURL);
+        // let imageInput = document.getElementsByClassName('profileImgInput');
+        // let file = event.target.files[0];
+        // console.log(file);
+        console.log({playerNum});
+    }
     return(
         <div className='player' style={{background: `${background}`}}>
-            <input className="profileImg" type="file" src={icon} alt="" />
+            <div className="imgContainer">
+                <input onChange={loadfile} className="profileImgInput" type="file" id={`file${playerNum}`} alt="" capture="user" accept="image/*"/>
+                <label htmlFor={`file${playerNum}`}>
+                    <img className="profileImg" src={playerPicture} alt="" />
+                </label>
+                <div id="output"></div>
+            </div>
             <div className='inner-player'>
               <p>Player {playerNum}</p>
               <input onChange={(e)=>setPlayer(e.target.value)} value={player} type="text" />

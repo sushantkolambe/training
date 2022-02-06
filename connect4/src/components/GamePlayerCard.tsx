@@ -8,7 +8,7 @@ interface ButtonProps{
 function GamePlayerCard({profileImg, playerNum, background, playerName, score}:ButtonProps){
     return(
         <div className='playersCard' style={{background: `${background}`}} >
-            <img src={profileImg} alt=''/>
+            <img id={`profileImg${playerNum}`} className="gamePlayerImg" src={profileImg} alt=''/>
             <div>
                 <p>Player {playerNum}</p>
                 <p>{playerName}</p>

@@ -1,14 +1,26 @@
 interface ButtonProps{
-    profileImg:any;
-    playerNum:number;
-    background:string;
-    playerName:any;
-    score:number;
+    profileImg:any
+    playerNum:number
+    background:string
+    playerName:any
+    score:number
+    classForBorder:string
 }
-function GamePlayerCard({profileImg, playerNum, background, playerName, score}:ButtonProps){
+function GamePlayerCard({
+    profileImg, 
+    playerNum, 
+    background, 
+    playerName, 
+    score, 
+    classForBorder
+}:ButtonProps){
     return(
         <div className='playersCard' style={{background: `${background}`}} >
-            <img id={`profileImg${playerNum}`} className="gamePlayerImg" src={profileImg} alt=''/>
+            <img 
+                id={`profileImg${playerNum}`} 
+                className={classForBorder} 
+                src={profileImg} 
+                alt=''/>
             <div>
                 <p>Player {playerNum}</p>
                 <p>{playerName}</p>

@@ -37,10 +37,13 @@
     color: #000000;
     gap: 20px;
 }
-.gamePlayerImg{
+#profileImg1, #profileImg2{
     width: 70px;
     height: 70px;
     border-radius: 50%;
+}
+.classForOrangeBorder{
+    border: 10px solid #FFA201;
 }
 .right-half{
     display: flex;
@@ -57,7 +60,7 @@
     margin: 0;
 }
 .right-half #congratulation{
-    display: none;
+    /* display: none; */
     font-size: 28px;
     color: #FF6600;
     margin: 0;
@@ -66,6 +69,9 @@
     font-size: 18px;
     font-weight: normal;
     margin: 0;
+}
+.right-half button{
+    cursor: pointer;
 }
 .left-half{
     display: grid;
@@ -81,6 +87,6 @@
     border-radius: 50%;
     cursor: pointer;
 }
-.right-half #button1{
-    display: none;
+.winningCombinationRing img{
+    border-color: #FF6600 !important;
 }

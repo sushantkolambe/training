@@ -32,7 +32,8 @@ export const generateNewBoard = () => [
             board[r][c] === board[r - 2][c] &&
             board[r][c] === board[r - 3][c]
           ) {
-            return board[r][c]
+            const data = {playerWon:board[r][c], winningCombination:[[r, c],[r-1, c], [r-2, c], [r-3, c]]};
+            return data;
           }
         }
       }
@@ -49,7 +50,8 @@ export const generateNewBoard = () => [
             board[r][c] === board[r][c + 2] &&
             board[r][c] === board[r][c + 3]
           ) {
-            return board[r][c]
+            const data = {playerWon:board[r][c], winningCombination:[[r, c],[r, c+1], [r, c+2], [r, c+3]]};
+            return data;
           }
         }
       }
@@ -66,7 +68,8 @@ export const generateNewBoard = () => [
             board[r][c] === board[r - 2][c + 2] &&
             board[r][c] === board[r - 3][c + 3]
           ) {
-            return board[r][c]
+            const data = {playerWon:board[r][c], winningCombination:[[r, c],[r-1, c+1], [r-2, c+2], [r-3, c+3]]};
+            return data;
           }
         }
       }
@@ -83,7 +86,8 @@ export const generateNewBoard = () => [
             board[r][c] === board[r - 2][c - 2] &&
             board[r][c] === board[r - 3][c - 3]
           ) {
-            return board[r][c]
+            const data = {playerWon:board[r][c], winningCombination:[[r, c],[r-1, c-1], [r-2, c-2], [r-3, c-3]]};
+            return data;
           }
         }
       }
@@ -98,7 +102,7 @@ export const generateNewBoard = () => [
         }
       }
     }
-    return 'draw'
+    // return 'draw'
   }
   
   export const checkForWin = (board:any) => {
